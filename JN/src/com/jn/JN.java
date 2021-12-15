@@ -1,7 +1,5 @@
 package com.jn;
 
-import java.io.IOException;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,21 +9,26 @@ import javafx.stage.Stage;
 public class JN extends Application {
 
 	@Override
-	public void start(Stage stage) throws IOException {
-		Parent root = FXMLLoader.load(getClass().getResource("view/JN.fxml"));
+	public void start(Stage stage) {
 
-		Scene scene = new Scene(root);
+		try {
 
-		stage.setScene(scene);
-		stage.setTitle("JN Informática");
-		stage.show();
-		System.out.println("Iniciou!!!");
-		
+			Parent root = FXMLLoader.load(getClass().getResource("JN.fxml"));
+
+			Scene scene = new Scene(root);
+
+			stage.setTitle("JN Informática");
+			stage.setScene(scene);
+			stage.show();
+			System.out.println("Iniciou!!!");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		launch(args);
 	}
 
 }
