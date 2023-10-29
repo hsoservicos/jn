@@ -1,2 +1,0 @@
-
-		stage.getIcons().add(new Image(getClass().getResourceAsStream("jn.png")));  // Icone da aplicação.
